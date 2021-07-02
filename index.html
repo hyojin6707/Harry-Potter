@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 배너</title>
+    <style>
+        body{
+            height: 100vh;            
+            background: #2a3436;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner {
+            position: relative;
+            width: 800px;
+            height: 300px;
+            background: #ccc;
+            color: #fff;
+            text-shadow: 1px 1px 2px #333;
+            display: block;
+            background-image: url(images/logo1.png),
+                              url(images/해리포터\ \(1\).gif);
+            background-repeat: no-repeat, no-repeat;
+            background-position: 0 0, right;                  
+            background-size: 170px 170px,cover; 
+            overflow: hidden;
+        }
+        .logo {
+            width: 366px;
+            height: 100px;
+            background: url(/images/LOGO.png);
+            position: absolute;
+            top: 70%;
+            right: 20px;
+            animation-name: logo;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+    }
+        @keyframes logo {
+            0% { right: 800;}
+            9% { right: 25px;}
+            10% { right: 10px;}
+        }
+        .banner .url {
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=47528" class="banner">
+        <div class="logo">Harry Potter</div>
+    </a>
+</body>
+</html>
